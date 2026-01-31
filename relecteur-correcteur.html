@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORRECTHOR – RELECTEUR / CORRECTEUR</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset minimal */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fond d'écran */
+    body {
+      font-family: 'Playfair Display', serif;
+      height: 100vh;
+      background: url('images/relecteur-correcteur.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    /* Menu vertical centré */
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px 40px;
+      border-radius: 12px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      text-align: center;
+    }
+
+    nav ul li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    /* Animation d'apparition du menu */
+    nav ul li {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    nav ul li:nth-child(1) { animation-delay: 0.2s; }
+    nav ul li:nth-child(2) { animation-delay: 0.4s; }
+    nav ul li:nth-child(3) { animation-delay: 0.6s; }
+    nav ul li:nth-child(4) { animation-delay: 0.8s; }
+    nav ul li:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ACCUEIL</a></li>
+      <li><a href="redacteur.html">RÉDACTEUR</a></li>
+      <li><a href="auteur.html">AUTEUR</a></li>
+      <li><a href="biographe.html">BIOGRAPHE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
