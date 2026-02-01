@@ -1,210 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CORRECTHOR — Auteur</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORRECTHOR – AUTEUR</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-/* ===== RESET MINIMAL ===== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* ===== BASE ===== */
-body {
-    font-family: "Georgia", "Times New Roman", serif;
-    background-color: #121212;
-    color: #e6e2dc;
-    line-height: 1.7;
-}
-
-/* ===== STRUCTURE ===== */
-header {
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-header h1 {
-    font-size: 1.8rem;
-    letter-spacing: 0.08em;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem 4rem;
-}
-
-/* ===== INTRO ===== */
-.intro {
-    max-width: 720px;
-    margin-bottom: 3rem;
-    font-size: 1.05rem;
-    color: #d2cec7;
-}
-
-/* ===== LISTE DES ŒUVRES ===== */
-.works {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-.work {
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-.work:last-child {
-    border-bottom: none;
-}
-
-.work-title {
-    font-size: 1.35rem;
-    font-style: italic;
-    margin-bottom: 0.4rem;
-}
-
-.work-title a {
-    color: #e6e2dc;
-    text-decoration: none;
-    transition: color 0.4s ease;
-}
-
-.work-title a:hover {
-    color: #bda97f;
-    text-decoration: underline;
-}
-
-.work-meta {
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    color: #9a948a;
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-}
-
-.work-desc {
-    font-size: 0.95rem;
-    color: #c9c4bc;
-    max-width: 650px;
-}
-
-/* ===== ŒUVRE À PARAÎTRE ===== */
-.work.upcoming .work-title {
-    color: #bfb8ac;
-}
-
-.work.upcoming .work-title span {
-    cursor: default;
-}
-
-.work.upcoming .work-meta {
-    color: #7f7a72;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    padding: 2rem 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.75rem;
-    color: #7e7971;
-    text-align: center;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5rem;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .work-title {
-        font-size: 1.2rem;
+    body {
+      font-family: 'Playfair Display', serif;
+      height: 100vh;
+      background: url('images/auteur.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
 
-    .intro {
+    /* Menu vertical centré */
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px 25px;
+      border-radius: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+
+    nav ul li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    nav ul li {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    nav ul li:nth-child(1) { animation-delay: 0.2s; }
+    nav ul li:nth-child(2) { animation-delay: 0.4s; }
+    nav ul li:nth-child(3) { animation-delay: 0.6s; }
+    nav ul li:nth-child(4) { animation-delay: 0.8s; }
+    nav ul li:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Adaptations responsive */
+    @media (max-width: 600px) {
+      nav {
+        padding: 15px 20px;
+      }
+      nav ul li a {
         font-size: 1rem;
+      }
+      nav ul {
+        gap: 10px;
+      }
     }
-}
-</style>
+
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Auteur</h1>
-</header>
-
-<main>
-
-    <section class="intro">
-        <p>
-            Certaines œuvres jalonnent un parcours sans jamais chercher la lumière.
-            Elles apparaissent, s’effacent, puis reviennent sous une autre forme.
-            Ce sont celles-ci.
-        </p>
-    </section>
-
-    <section class="works">
-
-        <article class="work">
-            <h2 class="work-title">
-                <a href="https://example.com/nouvelle-1993" target="_blank" rel="noopener">
-                    Titre de la nouvelle
-                </a>
-            </h2>
-            <div class="work-meta">Nouvelle • 1993</div>
-            <p class="work-desc">
-                Première fiction publiée, écrite à l’orée du parcours.
-            </p>
-        </article>
-
-        <article class="work">
-            <h2 class="work-title">
-                <a href="https://example.com/roman-2015" target="_blank" rel="noopener">
-                    Titre du roman
-                </a>
-            </h2>
-            <div class="work-meta">Roman • 2015</div>
-            <p class="work-desc">
-                Roman charnière, structurant l’écriture et ses obsessions.
-            </p>
-        </article>
-
-        <article class="work">
-            <h2 class="work-title">
-                <a href="https://example.com/nouvelle-2023" target="_blank" rel="noopener">
-                    Titre de la nouvelle
-                </a>
-            </h2>
-            <div class="work-meta">Nouvelle • 2023</div>
-            <p class="work-desc">
-                Retour à la forme courte, dans une langue plus resserrée.
-            </p>
-        </article>
-
-        <article class="work upcoming">
-            <h2 class="work-title">
-                <span>Titre du roman</span>
-            </h2>
-            <div class="work-meta">Roman • À paraître</div>
-            <p class="work-desc">
-                Texte en cours de publication.
-            </p>
-        </article>
-
-    </section>
-
-</main>
-
-<footer>
-    © CORRECTHOR
-</footer>
+  <nav>
+    <ul>
+      <li><a href="index.html">ACCUEIL</a></li>
+      <li><a href="relecteur-correcteur.html">RELECTEUR / CORRECTEUR</a></li>
+      <li><a href="redacteur.html">RÉDACTEUR</a></li>
+      <li><a href="biographe.html">BIOGRAPHE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
 </body>
 </html>
