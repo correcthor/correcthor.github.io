@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORRECTHOR – TARIFS</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      min-height: 100vh;
+      background: url('images/tarifs.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Menu minimal tout en haut */
+    nav {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Conteneur de contenu */
+    .contenu {
+      margin-top: 80px; /* décale le contenu sous le menu */
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(0,0,0,0.5);
+      padding: 25px 30px;
+      border-radius: 10px;
+    }
+
+    .contenu h1, .contenu h2 {
+      color: #7a8f3a; /* vert olive pour titres */
+      margin-bottom: 15px;
+    }
+
+    .contenu p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .contenu img {
+      max-width: 100%;
+      display: block;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+
+    .contenu a {
+      color: #7a8f3a;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .contenu a:hover {
+      color: #a3b04b;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .contenu {
+        padding: 15px 20px;
+      }
+      nav a {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+  </nav>
+
+  <div class="contenu">
+    <h1>TARIFS</h1>
+    <p>Bienvenue sur la page des tarifs. Ici, vous pouvez détailler vos offres et conditions pour vos services de rédaction, relecture ou autres prestations.</p>
+
+    <!-- Exemple de contenu -->
+    <h2>Exemple de sous-titre</h2>
+    <p>Vous pouvez ajouter vos grilles tarifaires, images illustratives ou liens externes.</p>
+
+    <img src="images/exemple.jpg" alt="Exemple d'image">
+
+    <p>Pour un lien externe : <a href="https://example.com" target="_blank">Cliquez ici</a></p>
+  </div>
+
+</body>
+</html>
