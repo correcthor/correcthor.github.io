@@ -24,7 +24,7 @@
       padding: 20px;
     }
 
-    /* Menu minimal tout en haut */
+    /* Menu minimal */
     nav {
       position: absolute;
       top: 15px;
@@ -45,54 +45,70 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Conteneur de contenu */
+    /* Conteneur principal */
     .contenu {
-      margin-top: 80px; /* décale le contenu sous le menu */
+      margin-top: 80px;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
       background: rgba(0,0,0,0.5);
-      padding: 25px 30px;
+      padding: 30px;
       border-radius: 10px;
     }
 
-    .contenu h1, .contenu h2 {
-      color: #7a8f3a; /* vert olive pour titres */
-      margin-bottom: 15px;
-    }
-
-    .contenu p {
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
-    .contenu img {
-      max-width: 100%;
-      display: block;
-      margin: 15px 0;
-      border-radius: 6px;
-    }
-
-    .contenu a {
+    .contenu h1 {
       color: #7a8f3a;
-      text-decoration: underline;
-      transition: 0.3s;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
-    .contenu a:hover {
-      color: #a3b04b;
+    /* Sections */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    /* Patches généraux */
+    .patches {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .patch {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+      width: 240px;
+    }
+
+    .patch:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-4px);
+    }
+
+    /* Patch diplôme */
+    .patch.diplome {
+      width: 320px;
+      font-weight: 700;
+    }
+
+    /* Patch romans */
+    .patch img {
+      max-width: 100%;
+      border-radius: 6px;
     }
 
     /* Responsive */
     @media (max-width: 600px) {
-      .contenu {
-        padding: 15px 20px;
-      }
-      nav a {
-        font-size: 1rem;
+      .patch {
+        width: 100%;
       }
     }
-
   </style>
 </head>
 
@@ -104,15 +120,49 @@
 
   <div class="contenu">
     <h1>RÉALISATIONS</h1>
-    <p>Bienvenue sur la page de mes réalisations. Ici, vous pouvez présenter vos textes terminés, projets à venir ou travaux personnels.</p>
 
-    <!-- Exemple de contenu -->
-    <h2>Exemple de sous-titre</h2>
-    <p>Ajoutez des images, des descriptions et des liens externes pour mettre en valeur vos réalisations.</p>
+    <!-- ACTE I : Diplôme -->
+    <div class="section">
+      <div class="patches">
+        <a href="documents/diplome.pdf" target="_blank" class="patch diplome">
+          Diplôme professionnel<br>
+          (ouvrir le document)
+        </a>
+      </div>
+    </div>
 
-    <img src="images/exemple.jpg" alt="Exemple d'image">
+    <!-- ACTE II : Retours clients -->
+    <div class="section">
+      <div class="patches">
+        <a href="https://www.malt.fr" target="_blank" class="patch">
+          Retours clients<br>
+          Plateforme MALT
+        </a>
 
-    <p>Pour un lien externe : <a href="https://example.com" target="_blank">Cliquez ici</a></p>
+        <a href="https://www.malt.fr" target="_blank" class="patch">
+          Retours clients<br>
+          Plateforme MALT
+        </a>
+      </div>
+    </div>
+
+    <!-- ACTE III : Romans -->
+    <div class="section">
+      <div class="patches">
+        <a href="https://site-auteur-1.com" target="_blank" class="patch">
+          <img src="images/roman1.jpg" alt="Couverture roman 1">
+        </a>
+
+        <a href="https://site-auteur-2.com" target="_blank" class="patch">
+          <img src="images/roman2.jpg" alt="Couverture roman 2">
+        </a>
+
+        <a href="https://site-auteur-3.com" target="_blank" class="patch">
+          <img src="images/roman3.jpg" alt="Couverture roman 3">
+        </a>
+      </div>
+    </div>
+
   </div>
 
 </body>
