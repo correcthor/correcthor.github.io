@@ -24,7 +24,7 @@
       padding: 20px;
     }
 
-    /* Menu minimal ACCUEIL */
+    /* Menu minimal */
     nav {
       position: absolute;
       top: 15px;
@@ -45,49 +45,56 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Conteneur de contenu */
+    /* Contenu principal */
     .contenu {
-      margin-top: 80px;
-      max-width: 900px;
+      margin-top: 90px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 25px 30px;
+      background: rgba(0,0,0,0.55);
+      padding: 30px 35px;
+      border-radius: 12px;
+    }
+
+    .contenu h1 {
+      color: #7a8f3a;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 2.2rem;
+    }
+
+    /* Grille de patchs */
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .patch {
+      background: rgba(255,255,255,0.08);
       border-radius: 10px;
-    }
-
-    .contenu h1,
-    .contenu h2 {
-      color: #7a8f3a;
-      margin-bottom: 15px;
-    }
-
-    .contenu p {
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
-    .contenu img {
-      max-width: 100%;
-      display: block;
-      margin: 15px 0;
-      border-radius: 6px;
-    }
-
-    .contenu a {
-      color: #7a8f3a;
-      text-decoration: underline;
+      padding: 20px;
+      text-align: center;
       transition: 0.3s;
     }
 
-    .contenu a:hover {
-      color: #a3b04b;
+    .patch:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-4px);
     }
 
-    /* Responsive */
+    .patch img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .patch a {
+      display: inline-block;
+    }
+
     @media (max-width: 600px) {
       .contenu {
-        padding: 15px 20px;
+        padding: 20px;
       }
       nav a {
         font-size: 1rem;
@@ -105,24 +112,21 @@
   <div class="contenu">
     <h1>CONTRIBUTIONS</h1>
 
-    <p>
-      Cette page est dédiée à mes contributions : collaborations, participations,
-      textes collectifs, interventions éditoriales ou projets partagés.
-    </p>
+    <div class="grille">
 
-    <!-- Exemples -->
-    <h2>Exemple de contribution</h2>
-    <p>
-      Présentez ici une contribution précise, son contexte, votre rôle et,
-      si nécessaire, un lien externe.
-    </p>
+      <!-- Quotidien (photo seule) -->
+      <div class="patch">
+        <img src="images/quotidien.jpg" alt="Quotidien auquel j’ai contribué">
+      </div>
 
-    <img src="images/exemple.jpg" alt="Exemple de contribution">
+      <!-- Radio Roazhon -->
+      <div class="patch">
+        <a href="https://www.radio-roazhon.com/" target="_blank">
+          <img src="images/logo-radio.jpg" alt="Radio Roazhon">
+        </a>
+      </div>
 
-    <p>
-      Lien externe :
-      <a href="https://example.com" target="_blank">Voir la publication</a>
-    </p>
+    </div>
   </div>
 
 </body>
