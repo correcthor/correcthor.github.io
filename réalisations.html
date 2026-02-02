@@ -45,68 +45,69 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Conteneur principal */
+    /* Contenu principal */
     .contenu {
-      margin-top: 80px;
-      max-width: 900px;
+      margin-top: 90px;
+      max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
-      background: rgba(0,0,0,0.5);
-      padding: 30px;
-      border-radius: 10px;
+      background: rgba(0,0,0,0.55);
+      padding: 30px 35px;
+      border-radius: 12px;
     }
 
     .contenu h1 {
       color: #7a8f3a;
       margin-bottom: 25px;
       text-align: center;
+      font-size: 2.2rem;
     }
 
-    /* Sections */
-    .section {
-      margin-bottom: 40px;
-    }
-
-    /* Patches généraux */
-    .patches {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+    /* Grille de patchs */
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
     }
 
     .patch {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.08);
       border-radius: 10px;
       padding: 20px;
       text-align: center;
-      text-decoration: none;
-      color: #fff;
       transition: 0.3s;
-      width: 240px;
+      cursor: pointer;
     }
 
     .patch:hover {
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(255,255,255,0.15);
       transform: translateY(-4px);
     }
 
-    /* Patch diplôme */
-    .patch.diplome {
-      width: 320px;
-      font-weight: 700;
-    }
-
-    /* Patch romans */
     .patch img {
       max-width: 100%;
       border-radius: 6px;
+      margin-bottom: 12px;
     }
 
-    /* Responsive */
+    .patch a {
+      color: #7a8f3a;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .patch a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
-      .patch {
-        width: 100%;
+      .contenu {
+        padding: 20px;
+      }
+      nav a {
+        font-size: 1rem;
       }
     }
   </style>
@@ -121,48 +122,48 @@
   <div class="contenu">
     <h1>RÉALISATIONS</h1>
 
-    <!-- ACTE I : Diplôme -->
-    <div class="section">
-      <div class="patches">
-        <a href="images/diplome.pdf" target="_blank" class="patch diplome">
-          Certification<br>
-          
+    <div class="grille">
+
+      <!-- Certification -->
+      <div class="patch">
+        <p><strong>Certification</strong></p>
+        <a href="images/diplome.pdf" target="_blank">
+          CERTIFICATION
         </a>
       </div>
-    </div>
 
-    <!-- ACTE II : Retours clients -->
-    <div class="section">
-      <div class="patches">
-        <a href="https://www.malt.fr/profile/davidbaudet?overview" target="_blank" class="patch">
-          Marionnettes de Paris<br>
-          Plateforme MALT
-        </a>
-
-        <a href="https://www.malt.fr/profile/davidbaudet?overview" target="_blank" class="patch">
-          Marionnettes de Paris<br>
-          Plateforme MALT
+      <!-- Avis client MALT -->
+      <div class="patch">
+        <p><strong>Avis client</strong></p>
+        <a href="https://www.malt.fr/profile/davidbaudet?overview" target="_blank">
+          Marionnettes de Paris
         </a>
       </div>
-    </div>
 
-    <!-- ACTE III : Romans -->
-    <div class="section">
-      <div class="patches">
-        <a href="https://www.instagram.com/gillesmilliner/" target="_blank" class="patch">
-          <img src="images/roman1.jpg" alt="Couverture roman 1">
-        </a>
-
-        <a href="https://www.instagram.com/gillesmilliner/" target="_blank" class="patch">
-          <img src="images/roman2.jpg" alt="Couverture roman 2">
-        </a>
-
-        <a href="https://www.instagram.com/gillesmilliner/" target="_blank" class="patch">
-          <img src="images/roman4.jpg" alt="Couverture roman 3">
+      <div class="patch">
+        <p><strong>Avis client</strong></p>
+        <a href="https://www.malt.fr/profile/davidbaudet?overview" target="_blank">
+          Marionnettes de Paris
         </a>
       </div>
-    </div>
 
+      <!-- Romans -->
+      <div class="patch">
+        <img src="images/roman1.jpg" alt="Couverture roman 1">
+        <a href="https://www.instagram.com/gillesmilliner/" target="_blank">Voir le roman</a>
+      </div>
+
+      <div class="patch">
+        <img src="images/roman2.jpg" alt="Couverture roman 2">
+        <a href="https://www.instagram.com/gillesmilliner/" target="_blank">Voir le roman</a>
+      </div>
+
+      <div class="patch">
+        <img src="images/roman4.jpg" alt="Couverture roman 3">
+        <a href="https://www.instagram.com/gillesmilliner/" target="_blank">Voir le roman</a>
+      </div>
+
+    </div>
   </div>
 
 </body>
