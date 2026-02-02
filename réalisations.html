@@ -102,6 +102,13 @@
       text-decoration: underline;
     }
 
+    /* DESKTOP UNIQUEMENT : "Voir le roman" en blanc */
+    @media (min-width: 601px) {
+      .patch img + a {
+        color: #ffffff;
+      }
+    }
+
     @media (max-width: 600px) {
       .contenu {
         padding: 20px;
